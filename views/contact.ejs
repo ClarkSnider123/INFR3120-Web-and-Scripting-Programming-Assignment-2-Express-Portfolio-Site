@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <link rel='stylesheet' href='bootstrap/dist/css/bootstrap.min.css'/>
+    <link rel="stylesheet" href="/@fortawesome/fontawesome-free/css/all.min.css"/>
+    <script src="bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="video.js" defer></script>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">Navbar</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <!--change to ms auto to mvoe to right side-->
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <% if(title=="Home"){%>
+              <a class="nav-link active" aria-current="page" href="/home"><i class="fa-solid fa-house"></i> Home</a>
+              <% } else { %>
+              <a class="nav-link" aria-current="page" href="/home"><i class="fa-solid fa-house"></i> Home</a>
+              <% } %>
+            </li>
+            <li class="nav-item">
+              <% if(title=="About Me"){%>
+              <a class="nav-link active" aria-current="page" href="/about">About Me</a>
+              <% } else { %>
+              <a class="nav-link" aria-current="page" href="/about"></i> About Me</a>
+              <% } %>
+            </li>
+            <li class="nav-item">
+              <% if(title=="Project Page"){%>
+              <a class="nav-link active" aria-current="page" href="/project">Project Page</a>
+              <% } else { %>
+              <a class="nav-link" aria-current="page" href="/project"></i> Project Page</a>
+              <% } %>
+            </li>
+            <li class="nav-item">
+              <% if(title=="Contact Me"){%>
+              <a class="nav-link active" aria-current="page" href="/contact">Contact Me</a>
+              <% } else { %>
+              <a class="nav-link" aria-current="page" href="/contact"></i> Contact Me</a>
+              <% } %>
+            </li>
+        </div>
+      </div>
+    </nav>
+    <h1><%= title %></h1>
+    <div id = "wrapper">
+        <!--Form-->
+        <form class="contactForm" action="index.html">
+            <label for= "name">Name:</label><br>
+            <input type="text" id="name" name="name" required><br>
+            <label for= "email">Email:</label><br>
+            <input type="text" id="email" name="email" required><br>
+            <label for= "message">Message:</label><br>
+            <textarea id="message" name="message" rows="8" cols="50" required></textarea><br> 
+            <input type="checkbox" id="robotTest" name="robotTest" value="robot" required>
+            <label for="robotTest">I am not a robot</label><br>
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+      <!--Footer-->
+      <footer>
+        <p>&copy; 2026 by Clark Snider</p>
+        <p>Contact: clark.snider@ontariotechu.net</p>
+        <a href="https://github.com/ClarkSnider123">My Github</a><br>
+        <a href="https://www.linkedin.com/in/clark-snider-a4998b3b5/">Linkdin</a>
+      </footer>
+
+  </body>
+</html>
